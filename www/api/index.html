@@ -1,0 +1,154 @@
+<!-- test -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Courier New', monospace;
+            background: white;
+            color: black;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background: black;
+            color: white;
+            border-bottom: 2px solid black;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1 {
+            font-size: 1.5rem;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: white;
+            border: 1px solid white;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+        .back-link:hover {
+            background: white;
+            color: black;
+        }
+        main {
+            flex: 1;
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .description {
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .endpoint-list {
+            display: grid;
+            gap: 1px;
+            background: black;
+            border: 1px solid black;
+        }
+        .endpoint-header {
+            display: grid;
+            grid-template-columns: 100px 1fr 150px;
+            background: black;
+            color: white;
+            padding: 0.75rem 1rem;
+            font-weight: normal;
+        }
+        .endpoint-item {
+            display: grid;
+            grid-template-columns: 100px 1fr 150px;
+            background: white;
+            padding: 0.75rem 1rem;
+            align-items: center;
+        }
+        .method {
+            font-weight: bold;
+        }
+        .method.get { color: black; }
+        .method.post { color: black; }
+        .method.delete { color: black; }
+        .path {
+            font-family: 'Courier New', monospace;
+        }
+        .description-text {
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+        footer {
+            border-top: 1px solid #ddd;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.6;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>API ENDPOINTS</h1>
+        <a href="/" class="back-link">← HOME</a>
+    </header>
+    
+    <main>
+        <div class="description">
+            <p>REST API endpoints for webserv</p>
+        </div>
+        
+        <div class="endpoint-list">
+            <div class="endpoint-header">
+                <div>METHOD</div>
+                <div>ENDPOINT</div>
+                <div>DESCRIPTION</div>
+            </div>
+            
+            <div class="endpoint-item">
+                <div class="method get">GET</div>
+                <div class="path">/api</div>
+                <div class="description-text">List endpoints</div>
+            </div>
+            
+            <div class="endpoint-item">
+                <div class="method get">GET</div>
+                <div class="path">/api/status</div>
+                <div class="description-text">Server status</div>
+            </div>
+            
+            <div class="endpoint-item">
+                <div class="method post">POST</div>
+                <div class="path">/api/data</div>
+                <div class="description-text">Submit data</div>
+            </div>
+            
+            <div class="endpoint-item">
+                <div class="method delete">DELETE</div>
+                <div class="path">/api/data/:id</div>
+                <div class="description-text">Delete resource</div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        webserv/1.0 - REST API
+    </footer>
+</body>
+</html>

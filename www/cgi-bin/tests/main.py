@@ -1,0 +1,1 @@
+print("<h1>be not afraid, this is a CGI test</h1>");
