@@ -49,13 +49,6 @@ main.cpp
 
 ---
 
-## preview
-
-![cgi](assets/cgi.png)
-![upload](assets/uploads.png)
-
----
-
 ## build & run
 
 ```bash
